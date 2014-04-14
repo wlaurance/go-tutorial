@@ -51,7 +51,7 @@ var guestbookTemplate = template.Must(template.New("book").Parse(`
       {{else}}
         <p>An anonymous person wrote:</p>
       {{end}}
-      <pre>{{.Content}}</pre>
+      <pre>{{.Content}} at {{.Date}}</pre>
     {{end}}
     <form action="/sign" method="post">
       <div><textarea name="content" rows="3" cols="60"></textarea></div>
